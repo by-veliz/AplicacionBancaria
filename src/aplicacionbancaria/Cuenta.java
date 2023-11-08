@@ -13,6 +13,8 @@ public class Cuenta {
     private String usuario;
     private String contrasena;
     private double balance;
+    private boolean loggedIn;
+
 
     public String getNroCuenta() {
         return nroCuenta;
@@ -50,8 +52,15 @@ public class Cuenta {
         this.contrasena = contrasena;
     }
     
-    public void logIn(){
-        
+    public boolean logIn(String enteredPassword) {
+        if (!loggedIn && enteredPassword.equals(this.contrasena)) {
+            loggedIn = true;
+            System.out.println("Bienvenido, " + this.usuario + "!");
+            return true;
+        } else {
+            System.out.println("Ingreso denegado.");
+            return false;
+        }
     }
     
     public void logOut(){
