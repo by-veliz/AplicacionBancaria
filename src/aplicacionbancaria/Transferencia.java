@@ -4,12 +4,22 @@
  */
 package aplicacionbancaria;
 
+import java.util.Scanner;
+
 /**
  *
  * @author byvel
  */
 public class Transferencia extends Transacciones{
-    public void procesarTrasferencia(){
-        
+    public Transferencia(String transaccionID, String cuentaOrigen, String cuentaDestino, double montoTransaccion, String tipoTransaccion) {
+        super(transaccionID, cuentaOrigen, cuentaDestino, 0, "Transferencia");
+    }
+    @Override
+    public void procesarTransaccion(Cuenta usuario){
+        Scanner input=new Scanner(System.in);
+        double ultimoBalance = usuario.getBalance();
+        double montoTranferencia = input.nextDouble();
+        double newBalance = ultimoBalance - montoTranferencia; 
+        usuario.setBalance(newBalance);
     }
 }

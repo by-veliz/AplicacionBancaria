@@ -4,12 +4,23 @@
  */
 package aplicacionbancaria;
 
+import java.util.Scanner;
+
 /**
  *
  * @author byvel
  */
 public class Retiro extends Transacciones{
-    public void procesarRetiro(){
-        
+
+    public Retiro(String transaccionID, String cuentaOrigen, String cuentaDestino, double montoTransaccion, String tipoTransaccion) {
+        super(transaccionID, cuentaOrigen, null, 0, "Retiro");
+    }
+    @Override
+    public void procesarTransaccion(Cuenta usuario){
+        Scanner input=new Scanner(System.in);
+        double ultimoBalance = usuario.getBalance();
+        double retiro = input.nextDouble();
+        double newBalance = ultimoBalance - retiro; 
+        usuario.setBalance(newBalance);
     }
 }

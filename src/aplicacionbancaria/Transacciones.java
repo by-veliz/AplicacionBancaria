@@ -56,4 +56,8 @@ public class Transacciones {
         this.tipoTransaccion = tipoTransaccion;
     }
     
+    public void procesarTransaccion(Cuenta usuario){
+        
+    };
+    
 }
