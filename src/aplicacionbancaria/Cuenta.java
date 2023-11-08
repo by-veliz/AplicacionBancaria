@@ -7,6 +7,7 @@ public class Cuenta{
     private String usuario;
     private String contrasena;
     private double balance;
+    private int opcion;
     private boolean loggedIn;
     private String dni, nroCelular;
     Scanner teclado = new Scanner(System.in);
@@ -88,6 +89,22 @@ public class Cuenta{
         System.out.print("Crea una contrasena segura: ");
         this.contrasena = teclado.nextLine();
         System.out.println("\nBienvenido, "+ this.usuario+ "!");
-
+        
+        //DE AQUI PARA ADELANTE, YA TENÍA SUEÑO Y ESTABA VOLANDO, SO PUSE TIPO UNA BASE
+        //NO ME FUNEN :c
+        System.out.println("\n1. Consultar tu cuenta");
+        System.out.println("2. Hacer alguna Transaccion ");
+        System.out.println("3. Solicitar un Prestamo");
+        
+        
+        System.out.print("Ingrese la opcion: ");
+        opcion = teclado.nextInt();
+                
+        switch(opcion){
+            case 1 -> System.out.println("Elegiste Consultar Cuenta");
+            case 2 -> System.out.println("Elegiste Transacciones");
+            case 3 -> System.out.println("Elegiste Prestamos");
+            default -> System.out.println("Opcion no valida ");
+        }
     }
 }
