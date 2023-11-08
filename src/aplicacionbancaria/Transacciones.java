@@ -1,44 +1,51 @@
 package aplicacionbancaria;
 
 public class Transacciones {
-    private float transaccionID;
-    private float cuentaOrigen;
-    private float cuentaDestino;
-    private float montoTransaccion;
-    private float tipoTransaccion;
+    private String transaccionID;
+    private String cuentaOrigen;
+    private String cuentaDestino;
+    private double montoTransaccion;
+    private String tipoTransaccion;
 
-    public float getTransaccionID() {
+    public String getTransaccionID() {
         return transaccionID;
     }
-    public void setTransaccionID(float transaccion) {
-        this.transaccionID = transaccion;
+
+    public void setTransaccionID(String transaccionID) {
+        this.transaccionID = transaccionID;
     }
 
-    public float getCuentaOrigen() {
+    public String getCuentaOrigen() {
         return cuentaOrigen;
     }
-    public void setCuentaOrigen(float cuentaOrigen) {
+
+    public void setCuentaOrigen(String cuentaOrigen) {
         this.cuentaOrigen = cuentaOrigen;
     }
 
-    public float getCuentaDestino() {
+    public String getCuentaDestino() {
         return cuentaDestino;
     }
-    public void setCuentaDestino(float cuentaDestino) {
+
+    public void setCuentaDestino(String cuentaDestino) {
         this.cuentaDestino = cuentaDestino;
     }
 
-    public float getMontoTransaccion() {
+    public double getMontoTransaccion() {
         return montoTransaccion;
     }
-    public void setMontoTransaccion(float montoTransaccion) {
+
+    public void setMontoTransaccion(double montoTransaccion) {
         this.montoTransaccion = montoTransaccion;
     }
 
-    public float getTipoTransaccion() {
+    public String getTipoTransaccion() {
         return tipoTransaccion;
     }
-    public void setTipoTransaccion(float tipoTransaccion) {
+
+    public void setTipoTransaccion(String tipoTransaccion) {
         this.tipoTransaccion = tipoTransaccion;
     }
+
+   
 }
