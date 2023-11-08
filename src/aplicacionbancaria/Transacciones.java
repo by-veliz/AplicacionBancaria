@@ -7,6 +7,15 @@ public class Transacciones {
     private double montoTransaccion;
     private String tipoTransaccion;
 
+    public Transacciones(String transaccionID, String cuentaOrigen, String cuentaDestino, double montoTransaccion, String tipoTransaccion) {
+        this.transaccionID = transaccionID;
+        this.cuentaOrigen = cuentaOrigen;
+        this.cuentaDestino = cuentaDestino;
+        this.montoTransaccion = montoTransaccion;
+        this.tipoTransaccion = tipoTransaccion;
+    }
+    
+    
     public String getTransaccionID() {
         return transaccionID;
     }
@@ -46,6 +55,5 @@ public class Transacciones {
     public void setTipoTransaccion(String tipoTransaccion) {
         this.tipoTransaccion = tipoTransaccion;
     }
-
-   
+    
 }
