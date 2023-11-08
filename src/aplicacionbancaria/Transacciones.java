@@ -1,17 +1,17 @@
 package aplicacionbancaria;
 
 public class Transacciones {
-    private float transaccion;
+    private float transaccionID;
     private float cuentaOrigen;
     private float cuentaDestino;
     private float montoTransaccion;
     private float tipoTransaccion;
 
-    public float getTransaccion() {
-        return transaccion;
+    public float getTransaccionID() {
+        return transaccionID;
     }
-    public void setTransaccion(float transaccion) {
-        this.transaccion = transaccion;
+    public void setTransaccionID(float transaccion) {
+        this.transaccionID = transaccion;
     }
 
     public float getCuentaOrigen() {
