@@ -68,8 +68,8 @@ public class Cuenta {
         this.contrasena = contrasena;
     }
     
-    public boolean logIn(String enteredPassword) {
-        if (!loggedIn && enteredPassword.equals(this.contrasena)) {
+    public boolean logIn(String contrasenaLogIn) {
+        if (!loggedIn && contrasenaLogIn.equals(this.contrasena)) {
             loggedIn = true;
             System.out.println("Bienvenido, " + this.usuario + "!");
             return true;
