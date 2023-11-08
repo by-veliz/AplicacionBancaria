@@ -56,6 +56,9 @@ public class Cuenta {
     }
     
     public void logOut(){
-        
+        if (loggedIn) {
+            loggedIn = false;
+            System.out.println("Sesion Terminada");
+        }
     }
 }
