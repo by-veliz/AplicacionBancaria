@@ -2,7 +2,7 @@ package aplicacionbancaria;
 
 import java.util.Scanner;
 
-public class Cuenta implements Mostrar{
+public class Cuenta{
     private String nroCuenta;
     private String usuario;
     private String contrasena;
@@ -77,17 +77,16 @@ public class Cuenta implements Mostrar{
         }
     }
 
-    @Override
-    public void mostrar() {
+    public void registrarCuenta() {
         System.out.println("\tRegistro de usuario");
         System.out.print("Ingrese nombre y apellido: ");
-        usuario = teclado.nextLine();
+        this.usuario = teclado.nextLine();
         System.out.print("Ingrese su numero de telefono: ");
-        nroCelular = teclado.nextLine();
+        this.nroCelular = teclado.nextLine();
         System.out.print("Ingrese su DNI: ");
-        dni = teclado.nextLine();
+        this.dni = teclado.nextLine();
         System.out.print("Crea una contrasena segura: ");
-        contrasena = teclado.nextLine();
+        this.contrasena = teclado.nextLine();
         System.out.println("\nBienvenido, "+ this.usuario+ "!");
 
     }
