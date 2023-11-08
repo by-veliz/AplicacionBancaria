@@ -1,5 +1,5 @@
 package aplicacionbancaria;
 
-public class ConsultaCuenta {
+public class ConsultaCuenta extends Cuenta{
     
 }

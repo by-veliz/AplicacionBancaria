@@ -10,7 +10,6 @@ public class Prestamos {
     public float getMontoPrestamo() {
         return montoPrestamo;
     }
-
     public void setMontoPrestamo(float montoPrestamo) {
         this.montoPrestamo = montoPrestamo;
     }
@@ -18,7 +17,6 @@ public class Prestamos {
     public float getTasaInteres() {
         return TasaInteres;
     }
-
     public void setTasaInteres(float TasaInteres) {
         this.TasaInteres = TasaInteres;
     }
@@ -26,7 +24,6 @@ public class Prestamos {
     public float getBalancePrestamo() {
         return BalancePrestamo;
     }
-
     public void setBalancePrestamo(float BalancePrestamo) {
         this.BalancePrestamo = BalancePrestamo;
     }
@@ -34,7 +31,6 @@ public class Prestamos {
     public float getCuotasPrestamo() {
         return cuotasPrestamo;
     }
-
     public void setCuotasPrestamo(float cuotasPrestamo) {
         this.cuotasPrestamo = cuotasPrestamo;
     }
@@ -42,7 +38,6 @@ public class Prestamos {
     public float getPrestamoPlazo() {
         return prestamoPlazo;
     }
-
     public void setPrestamoPlazo(float prestamoPlazo) {
         this.prestamoPlazo = prestamoPlazo;
     }

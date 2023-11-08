@@ -10,7 +10,6 @@ public class Transacciones {
     public float getTransaccion() {
         return transaccion;
     }
-
     public void setTransaccion(float transaccion) {
         this.transaccion = transaccion;
     }
@@ -18,7 +17,6 @@ public class Transacciones {
     public float getCuentaOrigen() {
         return cuentaOrigen;
     }
-
     public void setCuentaOrigen(float cuentaOrigen) {
         this.cuentaOrigen = cuentaOrigen;
     }
@@ -26,7 +24,6 @@ public class Transacciones {
     public float getCuentaDestino() {
         return cuentaDestino;
     }
-
     public void setCuentaDestino(float cuentaDestino) {
         this.cuentaDestino = cuentaDestino;
     }
@@ -34,7 +31,6 @@ public class Transacciones {
     public float getMontoTransaccion() {
         return montoTransaccion;
     }
-
     public void setMontoTransaccion(float montoTransaccion) {
         this.montoTransaccion = montoTransaccion;
     }
@@ -42,9 +38,7 @@ public class Transacciones {
     public float getTipoTransaccion() {
         return tipoTransaccion;
     }
-
     public void setTipoTransaccion(float tipoTransaccion) {
         this.tipoTransaccion = tipoTransaccion;
     }
-    
 }
