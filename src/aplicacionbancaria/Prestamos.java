@@ -1,11 +1,19 @@
 package aplicacionbancaria;
 
 public class Prestamos {
+    private float prestamoID;
     private float montoPrestamo;
     private float TasaInteres;
     private float BalancePrestamo;
     private float cuotasPrestamo;
     private float prestamoPlazo;
+
+    public float getPrestamoID() {
+        return prestamoID;
+    }
+    public void setPrestamoID(float prestamoID) {
+        this.prestamoID = prestamoID;
+    }
 
     public float getMontoPrestamo() {
         return montoPrestamo;
@@ -43,4 +51,15 @@ public class Prestamos {
     }
     
     
+    public float calcularCuotasPrestamo(){
+        return cuotasPrestamo;
+    }
+    
+    public float pagarPrestamo(){
+        return montoPrestamo;
+    }
+    
+    public float generarEstadoPrestamo(){
+        return BalancePrestamo;
+    }
 }
