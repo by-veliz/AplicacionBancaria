@@ -1,19 +1,15 @@
 package aplicacionbancaria;
 
+import java.util.Scanner;
+
 public class Cuenta {
     private String nroCuenta;
     private String usuario;
     private String contrasena;
     private double balance;
     private boolean loggedIn;
-    private String nombreUsuario, dni, nroCelular;
-
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
+    private String dni, nroCelular;
+    Scanner teclado = new Scanner(System.in);
 
     public String getDni() {
         return dni;
@@ -57,13 +53,15 @@ public class Cuenta {
         this.balance = balance;
     }
     
-    public void registroUsuario(String nombreUsuario, String dni, String nroCelular){
+    public void registroUsuario(String usuario, String nroCelular, String dni){
         System.out.println("\tRegistro de usuario");
         System.out.print("Ingrese nombre y apellido: ");
+        usuario = teclado.nextLine();
         System.out.print("Ingrese su numero de telefono: ");
+        nroCelular = teclado.nextLine();
         System.out.print("Ingrese su DNI: ");
-        
-        System.out.println("Bienvenido, "+ this.nombreUsuario+ "!");
+        dni = teclado.nextLine();
+        System.out.println("Bienvenido, "+ this.usuario+ "!");
     }
     
     public void cambioContrasena(String contrasena){
