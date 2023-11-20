@@ -6,6 +6,9 @@ public class AplicacionBancaria {
         Cuenta cuenta = new Cuenta();
         cuenta.registrarCuenta();
         
+        // GUI de la app
+        LogIn logIn=new LogIn();
+        logIn.setVisible(true);
     }
     
 }
