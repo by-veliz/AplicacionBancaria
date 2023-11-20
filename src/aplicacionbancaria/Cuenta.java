@@ -101,10 +101,13 @@ public class Cuenta{
         opcion = teclado.nextInt();
                 
         switch(opcion){
-            case 1 -> System.out.println("Elegiste Consultar Cuenta");
-            case 2 -> System.out.println("Elegiste Transacciones");
-            case 3 -> System.out.println("Elegiste Prestamos");
-            default -> System.out.println("Opcion no valida ");
+            case 1: System.out.println("Elegiste Consultar Cuenta");
+            case 2: System.out.println("Elegiste Transacciones");
+            case 3: System.out.println("Elegiste Prestamos");
+                    Prestamos prestamo = new Prestamos();
+                    prestamo.generarEstadoPrestamo();
+                    break;
+            default: System.out.println("Opcion no valida ");
         }
     }
 }

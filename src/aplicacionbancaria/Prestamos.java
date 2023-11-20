@@ -1,21 +1,33 @@
 package aplicacionbancaria;
 
+import java.util.Scanner;
+
 public class Prestamos {
     private String prestamoID;
-    private double montoPrestamo;
-    private double montoCuotas;
-    private double TasaInteres;
-    private double BalancePrestamo;
+    private float montoPrestamo;
+    private float montoCuotas;
+    private float TasaInteres;
+    private float BalancePrestamo;
     private int cantidadCuotas;
     private int prestamoPlazo;
+    Scanner teclado = new Scanner(System.in);
 
     public Prestamos(String prestamoID, double montoPrestamo, double TasaInteres, double BalancePrestamo, int cuotasPrestamo, int prestamoPlazo) {
         this.prestamoID = prestamoID;
-        this.montoPrestamo = montoPrestamo;
-        this.TasaInteres = TasaInteres;
-        this.BalancePrestamo = BalancePrestamo;
+        this.montoPrestamo = (float) montoPrestamo;
+        this.TasaInteres = (float) TasaInteres;
+        this.BalancePrestamo = (float) BalancePrestamo;
         this.cantidadCuotas = cuotasPrestamo;
         this.prestamoPlazo = prestamoPlazo;
+    }
+
+    Prestamos() {
+        System.out.print("Ingrese su ID de prestamos: ");
+        prestamoID = teclado.nextLine();
+        System.out.print("Ingrese el monto que desea para el prestamo: S/.");
+        montoPrestamo = teclado.nextFloat();
+        System.out.print("Ingrese el balance(no entendi a q se referia :c): S/.");
+        BalancePrestamo = teclado.nextFloat();
     }
 
     public String getPrestamoID() {
@@ -31,7 +43,7 @@ public class Prestamos {
     }
 
     public void setMontoPrestamo(double montoPrestamo) {
-        this.montoPrestamo = montoPrestamo;
+        this.montoPrestamo = (float) montoPrestamo;
     }
 
     public double getTasaInteres() {
@@ -39,7 +51,7 @@ public class Prestamos {
     }
 
     public void setTasaInteres(double TasaInteres) {
-        this.TasaInteres = TasaInteres;
+        this.TasaInteres = (float) TasaInteres;
     }
 
     public double getBalancePrestamo() {
@@ -47,7 +59,7 @@ public class Prestamos {
     }
 
     public void setBalancePrestamo(double BalancePrestamo) {
-        this.BalancePrestamo = BalancePrestamo;
+        this.BalancePrestamo = (float) BalancePrestamo;
     }
 
     public int getCantidadCuotas() {
@@ -71,15 +83,15 @@ public class Prestamos {
     }
 
     public void setMontoCuotas(double montoCuotas) {
-        this.montoCuotas = montoCuotas;
+        this.montoCuotas = (float) montoCuotas;
     }
     
     
     public void calcularCuotasPrestamo(){
         double interesMensual = TasaInteres / 12 / 100; 
 
-        this.montoCuotas = montoPrestamo * (interesMensual * Math.pow(1 + interesMensual, cantidadCuotas))
-                / (Math.pow(1 + interesMensual,cantidadCuotas) - 1);
+        this.montoCuotas = (float) (montoPrestamo * (interesMensual * Math.pow(1 + interesMensual, cantidadCuotas))
+                / (Math.pow(1 + interesMensual,cantidadCuotas) - 1));
 
     }
     
@@ -89,7 +101,9 @@ public class Prestamos {
     }
     
     public void generarEstadoPrestamo(){
-        System.out.println("Prestamo ID: " + prestamoID);
+        System.out.println("\n");
+        System.out.println("\tPrestamo");
+        System.out.println("\nPrestamo ID: " + prestamoID);
         System.out.println("Monto del Prestamo: $/" + montoPrestamo);
         System.out.println("Balance del Prestamo: $/" + BalancePrestamo);
     }               
