@@ -80,6 +80,7 @@ public class Cuenta{
 
     public void registrarCuenta() {
         System.out.println("\tRegistro de usuario");
+        System.out.println("==============================");
         System.out.print("Ingrese nombre y apellido: ");
         this.usuario = teclado.nextLine();
         System.out.print("Ingrese su numero de telefono: ");
