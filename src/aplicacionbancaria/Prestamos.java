@@ -26,8 +26,6 @@ public class Prestamos {
         prestamoID = teclado.nextLine();
         System.out.print("Ingrese el monto que desea para el prestamo: S/.");
         montoPrestamo = teclado.nextFloat();
-        System.out.print("Ingrese el balance(no entendi a q se referia :c): S/.");
-        BalancePrestamo = teclado.nextFloat();
     }
 
     public String getPrestamoID() {
